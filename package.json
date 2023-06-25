@@ -1,0 +1,38 @@
+{
+  "name": "entity-to-json",
+  "description": "Easy way to transform entity classes with private properties to json",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Geraldo Jr.",
+    "email": "geraldojrcg@gmail.com",
+    "url": "https://github.com/Geraldojrcg"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "exports": {
+    "default": "./dist/index.cjs",
+    "import": "./dist/index.js",
+    "node": "./dist/index.cjs",
+    "require": "./dist/index.cjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.3"
+  }
+}
