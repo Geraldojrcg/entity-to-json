@@ -1,17 +1,9 @@
 import { entityToJson } from "./function";
 
-type WithEntityToJsonParams = {
-  privatePropertyPrefix?: string;
-};
-
-export function WithEntityToJson({
-  privatePropertyPrefix = "_",
-}: WithEntityToJsonParams = {}) {
+export function WithEntityToJson() {
   return function <T extends { new (...args: any[]): {} }>(target: T) {
-    return class extends target {
-      toJSON() {
-        return entityToJson(this, privatePropertyPrefix);
-      }
+    target.prototype.toJSON = function () {
+      return entityToJson(this);
     };
   };
 }

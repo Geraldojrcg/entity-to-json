@@ -1,15 +1,7 @@
 import { entityToJson } from "./function";
 
-export abstract class EntityToJson {
-  #privatePropertyPrefix: string = "_";
-
-  constructor(privatePropertyPrefix?: string) {
-    if (privatePropertyPrefix) {
-      this.#privatePropertyPrefix = privatePropertyPrefix;
-    }
-  }
-
+export class EntityToJson {
   toJSON() {
-    return entityToJson(this, this.#privatePropertyPrefix);
+    return entityToJson(this);
   }
 }

@@ -1,11 +1,5 @@
-export const entityToJson = (entity: Object, privatePropertyPrefix = "_"): Object => {
+export const entityToJson = (entity: Object): Object => {
   const obj = {};
-
-  for (let key in entity) {
-    if (key.startsWith(privatePropertyPrefix)) {
-      obj[key.substring(1)] = entity[key];
-    }
-  }
 
   const proto = Object.getPrototypeOf(entity);
   for (const key of Object.getOwnPropertyNames(proto)) {
@@ -16,5 +10,5 @@ export const entityToJson = (entity: Object, privatePropertyPrefix = "_"): Objec
     }
   }
 
-  return JSON.parse(JSON.stringify(obj));
+  return obj;
 };

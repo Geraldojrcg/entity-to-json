@@ -84,17 +84,13 @@ describe("entityToJson tests", () => {
       #age: number;
 
       constructor(name: string, age: number) {
-        super("#");
+        super();
         this.#name = name;
         this.#age = age;
       }
 
       get name() {
         return this.#name;
-      }
-
-      get age() {
-        return this.#age;
       }
     }
 
@@ -112,13 +108,12 @@ describe("entityToJson tests", () => {
     expect(JSON.stringify(cat)).toStrictEqual(
       JSON.stringify({
         name: "fufu",
-        age: 2,
       }),
     );
   });
 
-  it("should works with nested classes", () => {
-    @WithEntityToJson({ privatePropertyPrefix: "$" })
+  it("should works with nested entities", () => {
+    @WithEntityToJson()
     class Car {
       private $year: number;
       private $color: string;
