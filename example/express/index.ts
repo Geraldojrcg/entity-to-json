@@ -39,7 +39,7 @@ class Cat {
   }
 }
 
-@WithEntityToJson({ privatePropertyPrefix: "$" })
+@WithEntityToJson()
 class Car {
   private $year: number;
   private $color: string;

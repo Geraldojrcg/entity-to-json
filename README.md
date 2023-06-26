@@ -44,8 +44,16 @@ To fix this, this library is able to identify all getters of the class and call 
 
 ## Instalation
 
-```bash
+Using npm
 
+```shell
+npm i entity-to-json
+```
+
+Using yarn
+
+```shell
+yarn add entity-to-json
 ```
 
 ## Usage
@@ -53,6 +61,8 @@ To fix this, this library is able to identify all getters of the class and call 
 ### 1. Using `entityToJson` function and `toJSON` method
 
 ```ts
+import { entityToJson } from "entity-to-json";
+
 class Cat {
   private _name: string;
   private _age: number;
@@ -96,6 +106,8 @@ Output:
 ### 2. Using `WithEntityToJson` decorator
 
 ```ts
+import { WithEntityToJson } from "entity-to-json";
+
 @WithEntityToJson()
 class Car {
   private _year: number;
@@ -131,6 +143,8 @@ Output:
 ### 3. Using `EntityToJson` class with inheritance
 
 ```ts
+import { EntityToJson } from "entity-to-json";
+
 class Car extends EntityToJson {
   private _year: number;
   private _color: string;
