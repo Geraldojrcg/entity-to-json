@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Geraldojrcg/entity-to-json.git"
+    "url": "https://github.com/Geraldojrcg/entity-to-json.git"
   },
   "type": "module",
   "main": "./dist/index.js",
