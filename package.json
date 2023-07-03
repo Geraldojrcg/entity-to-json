@@ -8,6 +8,10 @@
     "email": "geraldojrcg@gmail.com",
     "url": "https://github.com/Geraldojrcg"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geraldojrcg/entity-to-json.git"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -22,7 +26,8 @@
     "require": "./dist/index.cjs"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsup src/index.ts",
