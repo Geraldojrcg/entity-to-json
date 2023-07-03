@@ -32,7 +32,7 @@
   "scripts": {
     "build": "tsup src/index.ts",
     "test": "jest --coverage",
-    "release": "release-it --no-npm"
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",
