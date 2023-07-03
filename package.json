@@ -1,7 +1,7 @@
 {
   "name": "entity-to-json",
   "description": "Easy way to transform entity classes with private properties to json",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "author": {
     "name": "Geraldo Jr.",
