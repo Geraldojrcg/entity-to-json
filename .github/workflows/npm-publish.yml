@@ -49,6 +49,7 @@ jobs:
           always-auth: true
       - run: npm i
       - run: npm run build
+      - run: echo "registry=https://npm.pkg.github.com/@geraldojrcg" >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{github.token}}
